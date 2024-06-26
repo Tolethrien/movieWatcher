@@ -1,8 +1,8 @@
-:root {
+#root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
+  width: 100vw;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
@@ -25,7 +25,7 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  min-width: 320px;
+  width: 100%;
   min-height: 100vh;
 }
 
@@ -68,30 +68,37 @@ button:focus-visible {
   }
 }
 .Wrapp {
-  display: flex;
-  flex-direction: column;
-  min-width: 320px;
+  width: 100%;
+  height: 100vh;
 }
 .Head {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0px 10px;
 }
 .MovieTile {
   display: flex;
+  width: 90%;
   align-items: center;
   justify-content: space-between;
   gap: 4rem;
   outline: 1px solid wheat;
   border-radius: 7px;
+  margin: 2px 0px;
   padding: 0.2rem 0.5rem;
 }
 .MovieButts {
   display: flex;
   gap: 0.6rem;
 }
+.list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .MovieTitle {
-  width: 200px;
   font-size: 16px;
   /* display: flex; */
   overflow: hidden;

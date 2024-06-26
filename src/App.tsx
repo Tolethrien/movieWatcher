@@ -1,8 +1,7 @@
 import { useState } from "react";
-import "./App.css";
 import AddNewMovie from "./components/addMovie";
 import MovieList from "./components/list";
-
+import "./index.css";
 function App() {
   const [isNewOpen, setIsNewOpen] = useState(false);
 
