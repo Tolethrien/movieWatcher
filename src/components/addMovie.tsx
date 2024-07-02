@@ -1,22 +1,25 @@
-import { collection, doc, setDoc } from "firebase/firestore";
-import db from "../firebase/firebase";
 import { useState } from "react";
+import { addMovie } from "../firebase/getData";
 interface Props {
   onClose: () => void;
+  forwardedRef: React.RefObject<HTMLFormElement>;
 }
-export default function AddNewMovie({ onClose }: Props) {
+export default function AddNewMovie({ onClose, forwardedRef }: Props) {
   const [name, setName] = useState("");
-  console.log(name);
   const submitTitle = (event: React.FormEvent) => {
     event.preventDefault();
     if (name.length === 0) onClose();
-    const ref = doc(collection(db, "movies"));
-    setDoc(ref, { name, watched: false });
+    addMovie(name);
     onClose();
   };
+
   return (
-    <form onSubmit={submitTitle}>
-      <div className="MovieTile AddFilmTile">
+    <form
+      onSubmit={submitTitle}
+      className="MovieTile AddFilmTile"
+      ref={forwardedRef}
+    >
+      <div className="addFilmTileFlex">
         <input
           autoFocus
           className={`MovieTitle`}

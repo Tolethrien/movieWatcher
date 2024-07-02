@@ -5,16 +5,21 @@ import {
   onSnapshot,
   orderBy,
   query,
+  setDoc,
   updateDoc,
 } from "firebase/firestore";
 import db from "../firebase/firebase";
 import { useEffect, useState } from "react";
-interface DBData {
+export interface DBData {
   name: string;
   id: string;
   watched: boolean;
 }
 
+export const addMovie = (name: string) => {
+  const ref = doc(collection(db, "movies"));
+  setDoc(ref, { name, watched: false });
+};
 export const updateMovie = (id: string, value: boolean) => {
   const ref = doc(db, "movies", id);
   updateDoc(ref, { watched: value });

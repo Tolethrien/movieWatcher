@@ -116,3 +116,19 @@ button:focus-visible {
 .AddFilmTile {
   margin-bottom: 2rem;
 }
+.addFilmTileFlex {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.lowerLine {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 1rem;
+  width: 90%;
+  gap: 1rem;
+}
+.focus {
+  background-color: #5d4e4e;
+}
