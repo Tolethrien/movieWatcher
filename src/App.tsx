@@ -30,7 +30,7 @@ function App() {
   };
   return (
     <>
-      <div className="Wrapp">
+      <div>
         <div className="Head">
           <h2>Movie List</h2>
           <button className="AddButton" onClick={addNewMovie}>
