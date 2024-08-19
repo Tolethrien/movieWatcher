@@ -45,6 +45,7 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  color: wheat;
 }
 button:hover {
   border-color: #646cff;
@@ -70,6 +71,7 @@ button:focus-visible {
   border-radius: 7px;
   margin: 2px 0px;
   padding: 0.2rem 0.5rem;
+  color: white;
 }
 .MovieButts {
   display: flex;
